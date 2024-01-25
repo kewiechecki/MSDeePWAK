@@ -1,0 +1,9 @@
+
+Cell Position
+ ==================== 
+Cell Position X,Cell Position Y,Cell Position Z,Unit,Category,Collection,Time,Default Labels,ID,
+45678.1,87455.5,77.6288,um,Cell,Cell Position,1,ATM,0,
+45668.3,87408.7,80.7177,um,Cell,Cell Position,1,ATM,1,
+45676.5,87432.7,79.7352,um,Cell,Cell Position,1,ATM,2,
+45710.6,87356.5,78.2153,um,Cell,Cell Position,1,TVC,3,
+45712.3,87364.1,83.7125,um,Cell,Cell Position,1,TVC,4,

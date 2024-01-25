@@ -1,0 +1,9 @@
+
+Nucleus Volume
+ ==================== 
+Nucleus Volume,Unit,Category,Time,Default Labels,CellID,ID,
+316.431,um^3,Nucleus,1,ATM,0,100000000,
+343.37,um^3,Nucleus,1,ATM,1,100000001,
+335.983,um^3,Nucleus,1,TVC,5,100000005,
+102.087,um^3,Nucleus,1,TVC,7,100000007,
+56.6271,um^3,Nucleus,1,TVC,8,100000008,

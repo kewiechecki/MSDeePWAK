@@ -1,0 +1,10 @@
+
+Nucleus Distance from Center of Mass to Cell Membrane
+ ==================== 
+Nucleus Distance from Center of Mass to Cell Membrane,Unit,Category,Time,Default Labels,CellID,ID,
+5.47251,um,Nucleus,1,ATM,3,100000000,
+4.39514,um,Nucleus,1,ATM,4,100000001,
+3.19652,um,Nucleus,1,TVC,5,100000003,
+2.38114,um,Nucleus,1,TVC,6,100000004,
+3.43343,um,Nucleus,1,TVC,10,100000008,
+3.19678,um,Nucleus,1,TVC,12,100000010,

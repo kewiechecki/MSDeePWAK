@@ -1,0 +1,9 @@
+
+Cell Cytoplasm Volume
+ ==================== 
+Cell Cytoplasm Volume,Unit,Category,Time,Default Labels,ID,
+2312.62,um^3,Cell,1,TVC,0,
+3079.02,um^3,Cell,1,ATM,1,
+2486.2,um^3,Cell,1,ATM,2,
+516.629,um^3,Cell,1,TVC,3,
+2065.04,um^3,Cell,1,TVC,4,

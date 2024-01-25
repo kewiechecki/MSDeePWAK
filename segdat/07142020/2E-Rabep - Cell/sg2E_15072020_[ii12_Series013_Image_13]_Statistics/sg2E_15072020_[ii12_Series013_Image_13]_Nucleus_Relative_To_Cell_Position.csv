@@ -1,0 +1,9 @@
+
+Nucleus Relative To Cell Position
+ ==================== 
+Nucleus Relative To Cell Position X,Nucleus Relative To Cell Position Y,Nucleus Relative To Cell Position Z,Unit,Category,Collection,Time,Default Labels,CellID,ID,
+5.15234,2.18359,-2.37411,um,Nucleus,Nucleus Relative To Cell Position,1,ATM,0,100000000,
+0.265625,1.16406,-3.09814,um,Nucleus,Nucleus Relative To Cell Position,1,ATM,1,100000001,
+-0.550781,1.56641,-1.94141,um,Nucleus,Nucleus Relative To Cell Position,1,TVC,2,100000002,
+-0.320313,2.5625,-1.14558,um,Nucleus,Nucleus Relative To Cell Position,1,TVC,3,100000003,
+-0.492188,0.972656,-0.642593,um,Nucleus,Nucleus Relative To Cell Position,1,TVC,4,100000004,

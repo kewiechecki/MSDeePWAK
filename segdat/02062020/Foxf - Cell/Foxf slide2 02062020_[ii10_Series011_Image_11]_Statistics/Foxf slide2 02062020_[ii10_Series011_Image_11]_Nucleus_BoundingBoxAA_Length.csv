@@ -1,0 +1,10 @@
+
+Nucleus BoundingBoxAA Length
+ ==================== 
+Nucleus BoundingBoxAA Length X,Nucleus BoundingBoxAA Length Y,Nucleus BoundingBoxAA Length Z,Unit,Category,Collection,Time,Default Labels,CellID,ID,
+7.40234,12.2344,11.4326,um,Nucleus,Nucleus BoundingBoxAA Length,1,ATM,1,100000001,
+7.40234,13.9453,10.5858,um,Nucleus,Nucleus BoundingBoxAA Length,1,ATM,2,100000002,
+5.125,4.55469,8.0452,um,Nucleus,Nucleus BoundingBoxAA Length,1,TVC,0,100000000,
+7.40234,5.97656,7.19833,um,Nucleus,Nucleus BoundingBoxAA Length,1,TVC,3,100000003,
+4.55469,5.41406,7.62177,um,Nucleus,Nucleus BoundingBoxAA Length,1,TVC,4,100000004,
+5.69531,7.40625,8.46863,um,Nucleus,Nucleus BoundingBoxAA Length,1,TVC,5,100000005,

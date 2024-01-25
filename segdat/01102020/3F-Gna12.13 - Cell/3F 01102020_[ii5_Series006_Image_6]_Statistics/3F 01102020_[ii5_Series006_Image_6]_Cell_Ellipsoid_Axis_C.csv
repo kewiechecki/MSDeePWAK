@@ -1,0 +1,12 @@
+
+Cell Ellipsoid Axis C
+ ==================== 
+Cell Ellipsoid Axis C X,Cell Ellipsoid Axis C Y,Cell Ellipsoid Axis C Z,Unit,Category,Collection,Time,Default Labels,ID,
+0.516679,-0.854549,-0.0528155,um,Cell,Cell Ellipsoid Axis C,1,ATM,0,
+0.370905,-0.927479,0.0470339,um,Cell,Cell Ellipsoid Axis C,1,ATM,1,
+0.666596,-0.723171,0.180757,um,Cell,Cell Ellipsoid Axis C,1,ATM,2,
+-0.162829,0.95138,0.261461,um,Cell,Cell Ellipsoid Axis C,1,TVC,3,
+-0.853325,-0.518675,0.0530353,um,Cell,Cell Ellipsoid Axis C,1,TVC,4,
+-0.165209,0.98577,0.0310531,um,Cell,Cell Ellipsoid Axis C,1,TVC,5,
+0.785631,0.617269,0.0419746,um,Cell,Cell Ellipsoid Axis C,1,TVC,6,
+0.112899,-0.993572,0.00823418,um,Cell,Cell Ellipsoid Axis C,1,TVC,7,

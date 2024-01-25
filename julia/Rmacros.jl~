@@ -1,0 +1,7 @@
+using RCall
+
+macro leiden(G)
+    R"library(leiden)"
+    @rput G
+    return R"leiden(G)"
+end

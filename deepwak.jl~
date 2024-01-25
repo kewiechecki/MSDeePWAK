@@ -1,0 +1,37 @@
+# encoder layer sizes
+l_e = [58,29,14]
+# number of classifier layers
+l_p = 5
+# number of heads
+h = 5
+# maximum clusters per head
+c = 14
+#test fraction
+frac = 10
+
+include("julia/DeePWAK.jl")
+include("julia/LayerFns.jl")
+
+using CSV, DataFrames, StatsPlots
+using JLD2
+
+epochs = 1000
+
+η = 0.001
+λ = 0.001
+opt = Flux.Optimiser(Flux.AdamW(η),Flux.WeightDecay(λ))
+
+groups = (DataFrame ∘ CSV.File)("data/groups.csv",normalizenames=true);
+
+dat = (DataFrame ∘ CSV.File)("data/z_dat.csv",normalizenames=true);
+dat = Matrix(dat[:,2:end]);
+dat = hcat(filter(x->sum(x) != 0,eachslice(dat,dims=2))...);
+
+X = scaledat(dat')
+m,n = size(X)
+l_e = vcat(m,l_e)
+
+n_test = Integer(2^round(log2(n) - log2(frac)))
+n_train = n - n_test
+test,train = sampledat(X,n_test) |> gpu
+X = gpu(X)

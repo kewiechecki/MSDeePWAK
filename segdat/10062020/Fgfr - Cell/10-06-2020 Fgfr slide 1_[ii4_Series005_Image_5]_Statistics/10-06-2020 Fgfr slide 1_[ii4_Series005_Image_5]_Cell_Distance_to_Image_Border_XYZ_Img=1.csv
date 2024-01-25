@@ -1,0 +1,10 @@
+
+Cell Distance to Image Border XYZ Img=1
+ ==================== 
+Cell Distance to Image Border XYZ,Unit,Category,Image,Time,Default Labels,ID,
+7.62183,um,Cell,Image 1,1,TVC,0,
+6.77496,um,Cell,Image 1,1,TVC,1,
+9.73901,um,Cell,Image 1,1,TVC,2,
+13.9734,um,Cell,Image 1,1,TVC,3,
+4.65778,um,Cell,Image 1,1,ATM,4,
+2.11718,um,Cell,Image 1,1,ATM,5,

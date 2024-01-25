@@ -1,0 +1,9 @@
+
+Nucleus Area
+ ==================== 
+Nucleus Area,Unit,Category,Time,Default Labels,CellID,ID,
+443.775,um^2,Nucleus,1,ATM,0,100000000,
+549.345,um^2,Nucleus,1,ATM,1,100000001,
+283.783,um^2,Nucleus,1,TVC,2,100000002,
+273.29,um^2,Nucleus,1,TVC,3,100000003,
+207.999,um^2,Nucleus,1,TVC,4,100000004,

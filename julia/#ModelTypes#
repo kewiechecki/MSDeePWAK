@@ -1,0 +1,3 @@
+using Flux, Zygote, Functors
+
+struct DEWAK

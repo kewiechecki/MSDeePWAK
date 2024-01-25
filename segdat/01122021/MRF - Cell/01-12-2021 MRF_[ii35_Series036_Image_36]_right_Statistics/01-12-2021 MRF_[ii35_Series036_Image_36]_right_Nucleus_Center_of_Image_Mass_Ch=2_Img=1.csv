@@ -1,0 +1,9 @@
+
+Nucleus Center of Image Mass Ch=2 Img=1
+ ==================== 
+Nucleus Center of Image Mass X,Nucleus Center of Image Mass Y,Nucleus Center of Image Mass Z,Unit,Category,Channel,Collection,Image,Time,Default Labels,CellID,ID,
+41992.1,99018.1,83.0325,um,Nucleus,2,Nucleus Center of Image Mass,Image 1,1,ATM,0,100000000,
+42016,99009.1,93.0174,um,Nucleus,2,Nucleus Center of Image Mass,Image 1,1,ATM,1,100000001,
+41998.6,99057.4,99.4329,um,Nucleus,2,Nucleus Center of Image Mass,Image 1,1,TVC,2,100000002,
+42003,99067.9,101.325,um,Nucleus,2,Nucleus Center of Image Mass,Image 1,1,TVC,3,100000003,
+42003.8,99060.5,109.17,um,Nucleus,2,Nucleus Center of Image Mass,Image 1,1,TVC,5,100000005,

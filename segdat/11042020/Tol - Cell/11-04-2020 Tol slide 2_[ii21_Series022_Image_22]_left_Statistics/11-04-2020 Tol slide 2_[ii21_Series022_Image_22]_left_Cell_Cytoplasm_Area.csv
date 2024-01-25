@@ -1,0 +1,11 @@
+
+Cell Cytoplasm Area
+ ==================== 
+Cell Cytoplasm Area,Unit,Category,Time,Default Labels,ID,
+863.605,um^2,Cell,1,TVC,0,
+1322.64,um^2,Cell,1,TVC,1,
+1808.93,um^2,Cell,1,TVC,2,
+1156.77,um^2,Cell,1,TVC,3,
+1741.18,um^2,Cell,1,ATM,4,
+1105.29,um^2,Cell,1,ATM,5,
+2341.06,um^2,Cell,1,ATM,6,

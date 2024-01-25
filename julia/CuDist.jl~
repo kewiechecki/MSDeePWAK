@@ -1,0 +1,54 @@
+using CUDA
+
+function pairwise_distance_kernel!(result, X)
+    i = threadIdx().x
+    j = blockIdx().x
+    if i <= size(result, 1) && j <= size(result, 2)
+        temp = 0.0f0
+        for k = 1:size(X, 2)
+            temp += (X[i, k] - X[j, k])^2
+        end
+        result[i, j] = sqrt(temp)
+    end
+    return
+end
+function pairwise_distances_gpu(X::CuArray{Float32})
+    m, n = size(X)
+    result = CuArray{Float32}(undef, m, m)
+    @cuda threads=n blocks=m pairwise_distance_kernel!(result, X)
+    return Array(result)  # convert back to CPU array if needed
+end
+X_gpu = CUDA.rand(Float32, 1000, 50)  # Replace with your data
+distances = pairwise_distances_gpu(X_gpu)
+using CUDA
+
+function kern_euclidean!(result, X)
+    i = (blockIdx().x - 1) * blockDim().x + threadIdx().x
+    for j = 1:size(result, 2)
+        if i <= size(X, 1) && j <= size(X, 1)
+            temp = 0.0f0
+            for k = 1:size(X, 2)
+                temp += (X[i, k] - X[j, k])^2
+            end
+            result[i, j] = sqrt(temp)
+        end
+    end
+    return
+end
+
+function euclidean(X::CuArray{Float32})
+    m, n = size(X)
+    result = CUDA.zeros(Float32, m, m)
+    threads_per_block = 256
+    blocks = cld(m, threads_per_block)
+    @cuda threads=threads_per_block blocks=blocks kern_euclidean!(result, X)
+    CUDA.synchronize()
+    return Array(result)
+end
+function euclidean(X::Adjoint{Float32, <:CuArray{Float32, 2}})
+    # Extract the parent array and proceed with computation
+    return euclidean(CuArray(X))
+end
+
+X_gpu = CUDA.rand(Float32, 1000, 50)
+distances = pairwise_distances_gpu(X_gpu)

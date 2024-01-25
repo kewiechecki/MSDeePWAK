@@ -1,0 +1,81 @@
+using Flux, Zygote, Functors
+
+# layer with unique connection for each input and output
+mutable struct OneToOne
+    weight::AbstractArray   # weight matrix
+    bias::AbstractArray  # bias vector
+    σ::Function # activation fn
+end
+@functor OneToOne (weight,bias)
+
+function OneToOne(in::Integer, out::Integer, σ = identity)
+    weight = randn(Float32, out)
+    bias = zeros(Float32, out)
+    return OneToOne(weight, bias, σ)
+end
+
+function (l::OneToOne)(x)
+    return l.σ(l.weight .* x .+ l.bias)
+end
+
+function Zygote.pullback(l::OneToOne, x::AbstractArray)
+    y = l.weight .* x .+ l.bias
+    z = l.σ(y)
+    
+    function B(Δ)
+        Δ = Δ .* gradient(layer.σ, y)[1]  # chain rule applied
+        ∇_w = sum(Δ .* x, dims=2)[:]  # Gradient w.r.t. weight
+        ∇_b = sum(Δ, dims=2)[:]       # Gradient w.r.t. bias
+        return (weight=∇_w, bias=∇_b), nothing
+    end
+    
+    return z, B
+end
+
+mutable struct Softmax
+    weight::AbstractArray
+    bias::AbstractArray
+    σ::Function
+end
+@functor Softmax (weight,bias)
+
+function Softmax(d::Integer)
+    weight = randn(Float32,d)
+    bias = randn(Float32,d)
+    return Softmax(weight,bias)
+end
+
+function (θ::Softmax)(x)
+    return θ.σ(θ.weight .* x .+ θ.bias)
+end
+
+#function Zygote.pullback(θ::Softmax,x::AbstractArray)
+#    y = θ(x)
+#    function back(Δ)
+#        Δ = Δ .* gradient(θ,y)[1]
+#        ∇_w = sum(Δ .* x,dims=2)
+
+mutable struct SoftNN
+    σ::Function
+end
+#
+#function (δ::SoftNN)(x)
+#    m,n = size(x)
+#    D = euclidean(x)
+#    D = D .* (1 .- I(n))
+
+mutable struct DEWAK
+    θ_e::Dense
+    ω::OneToOne
+    κ::Parallel
+    θ_d::Dense
+end
+@functor DEWAK
+
+function (m::DEWAK)(X::AbstractMatrix)
+    E = (m.ω ∘ m.θ_e)(X)
+    D = 1 ./ (euclidean(E) .+ eps(Float32))
+    D = wak(D)
+    X̂ = m.θ_d((D * E')')
+    return X̂
+end

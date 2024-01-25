@@ -1,0 +1,10 @@
+
+Nucleus Distance from Nucleus Membrane to Cell Membrane
+ ==================== 
+Nucleus Distance from Nucleus Membrane to Cell Membrane,Unit,Category,Time,Default Labels,CellID,ID,
+0.28399,um,Nucleus,1,ATM,1,100000000,
+1.27008,um,Nucleus,1,ATM,2,100000001,
+1.10802,um,Nucleus,1,ATM,3,100000002,
+0.284,um,Nucleus,1,ATM,4,100000003,
+0.898129,um,Nucleus,1,TVC,7,100000006,
+0.283894,um,Nucleus,1,TVC,8,100000007,

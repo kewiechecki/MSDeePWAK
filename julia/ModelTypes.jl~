@@ -1,0 +1,30 @@
+using Flux, CUDA, Functors, ProgressMeter
+
+mutable struct Autoencoder
+    encoder
+    decoder
+    loader::Flux.DataLoader
+    opt::Flux.Optimiser
+    loss::Function
+    epochs::Integer
+end
+@functor Autoencoder (encoder,decoder)
+
+function (α::Autoencoder)(X)
+    return Chain(α.encoder,α.decoder)(X)
+end
+
+
+function encoderlayers(m::Integer,d::Integer,l::Integer,σ=relu)
+    #dims = size(X)
+    #m = prod(dims[1:(length(dims)-1)])
+    s = div(d-m,l)
+    𝐝 = m:s:d
+    #𝐝 = vcat(𝐝,reverse(𝐝[1:length(𝐝)-1]))
+    θ = foldl(𝐝[3:length(𝐝)],
+              init=Chain(Dense(𝐝[1] => 𝐝[2],σ))) do layers,d
+        d_0 = size(layers[length(layers)].weight)[1]
+        return Chain(layers...,Dense(d_0 => d,σ))
+    end
+end
+    

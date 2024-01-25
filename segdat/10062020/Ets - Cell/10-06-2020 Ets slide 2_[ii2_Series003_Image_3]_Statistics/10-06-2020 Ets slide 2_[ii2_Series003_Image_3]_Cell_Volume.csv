@@ -1,0 +1,10 @@
+
+Cell Volume
+ ==================== 
+Cell Volume,Unit,Category,Time,Default Labels,ID,
+5256.01,um^3,Cell,1,ATM,1,
+5981.52,um^3,Cell,1,ATM,2,
+1803.76,um^3,Cell,1,TVC,3,
+922.234,um^3,Cell,1,TVC,4,
+646.819,um^3,Cell,1,TVC,5,
+1655.52,um^3,Cell,1,TVC,6,
